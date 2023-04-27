@@ -22,9 +22,14 @@ def clean_data(site_name, odm_data):
         # Setting the correct ODM site name
         odm_data[program].rename(columns={'Unnamed: 0': 'Site'}, inplace = True)
         odm_data[program]['Site'] = site_name  
+    return odm_data
+        
+        
+def filter_build_status(build_status_allowed, odm_data):
+    for program in odm_data.keys():
         # Extract data with appropriate build statuses only
         odm_data[program].rename(columns={odm_data[program].columns[1]: 'Build Status'}, inplace = True)
-        odm_data[program] = odm_data[program][(odm_data[program]['Build Status'] == 'ACTIVE') | (odm_data[program]['Build Status'] == 'WIP') | (odm_data[program]['Build Status'] == 'DONE') | (odm_data[program]['Build Status'] == np.nan)]
+        odm_data[program] = odm_data[program][odm_data[program]['Build Status'].isin(build_status_allowed)]
     return odm_data
 
 
