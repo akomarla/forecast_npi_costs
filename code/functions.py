@@ -124,10 +124,9 @@ def avg_by_prod_code(odm_data, program, subtotal_col, cost_col, print_cond):
 
 def write_to_excel(write_file_path, avg_cols, df):
     df.to_excel(write_file_path)
-    print('Data on programs, product codes, averages for: \n')
+    print('Data on programs, product codes, averages for the following columns have been written to the specified Excel file: ')
     for col in avg_cols:
         print('Variable (column) name:', col)
-    print('have been written to the specified Excel file.')
 
 
 
