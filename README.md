@@ -11,7 +11,7 @@ Data used for the forecasting process is the NPI planners' quote files for two O
 2. PTI HS:
 
 Follow these steps to run the program:
-(a). Download the quote file to a local directory
+(a). Download the quote file to a local directory<br>
 (b). Remove any pre-existing filters on the column headers for all of the tabs of the quote file 
 (c). Download the npi_quote_forecast repository to a local folder
 (d). For simplest execution, download Anacondas for Windows: https://docs.anaconda.com/free/anaconda/install/windows/ and launch a Python IDE from there (Spyder, PyCharm, etc.)
