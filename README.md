@@ -15,9 +15,9 @@ Follow these steps to run the program:<br>
 
 (a). Download the quote file to a local directory such as "C:/Users/apkom/Dowloads/...."<br>
 
-(b). Remove any pre-existing filters on the column headers for all of the tabs of the quote file. Ensure that all tabs are double checked for filters.<br> 
+(b). Remove any pre-existing filters on the column headers for all of the tabs of the quote file. Ensure that all tabs are double checked for filters<br> 
 
-(c). Download the npi_quote_forecast repository to a local folder such as "C:/Users/apkom/Repos/...."<br>
+(c). Download the npi_quote_forecast repository to a local folder such as "C:/Users/apkom/Repos/...." and unzip it<br>
 
 (d). For simplest execution, download Anacondas for Windows: https://docs.anaconda.com/free/anaconda/install/windows/ and launch a Python IDE from there (Spyder, PyCharm, etc.)<br>
 
