@@ -11,15 +11,24 @@ Data used for the forecasting process is the NPI planners' quote files for two O
 2. PTI HS:
 
 Follow these steps to run the program:<br>
-(a). Download the quote file to a local directory<br>
-(b). Remove any pre-existing filters on the column headers for all of the tabs of the quote file<br> 
-(c). Download the npi_quote_forecast repository to a local folder<br>
+(a). Download the quote file to a local directory such as "C:/Users/apkom/Dowloads/...."<br>
+
+(b). Remove any pre-existing filters on the column headers for all of the tabs of the quote file. Ensure that all tabs are double checked for filters.<br> 
+
+(c). Download the npi_quote_forecast repository to a local folder such as "C:/Users/apkom/Repos/...."<br>
+
 (d). For simplest execution, download Anacondas for Windows: https://docs.anaconda.com/free/anaconda/install/windows/ and launch a Python IDE from there (Spyder, PyCharm, etc.)<br>
+
 (e). In the Python IDE, say Spyder, navigate to the File menu and open the ```functions.py``` and ```run.py``` files from the npi_quote_forecast repository<br>
+
 (f). Make the following modifications in the ```run.py``` file:<br>
 * Change the read_file_path parameter to the path of the downloaded quote file<br>
 * Change the start and end work weeks (WW) in the ww_range parameter to the preferred range<br>
 * Change the build_status_allowed parameter to include or exclude any build statuses - DONE, NaN, WIP, etc.<br>
 * Change the write_file_path parameter to the path where the forecasted values should be written<br>
+
 (g). Execute the ```run.py``` file and view output in the write_file_path
+
+
+Contact aparna.komarla@solidigm.com with any questions or concerns.
  
