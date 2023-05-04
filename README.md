@@ -6,11 +6,13 @@ Future capabilities can include using different summary statistics such as media
 
 ## Instructions
 
-Data used for the forecasting process is the NPI planners' quote files for two ODMs available here: 
+Data for the forecasting process is the NPI planners' quote files for two ODMs available here: 
 1. Pegatron: https://nandps.sharepoint.com/:f:/r/teams/NSG_NPI_Pegatron/Shared%20Documents/NSG_NPI_Pegatron-NPI%20QUOTES?csf=1&web=1&e=DbMRgg and 
 2. PTI HS:
 
+
 Follow these steps to run the program:<br>
+
 (a). Download the quote file to a local directory such as "C:/Users/apkom/Dowloads/...."<br>
 
 (b). Remove any pre-existing filters on the column headers for all of the tabs of the quote file. Ensure that all tabs are double checked for filters.<br> 
