@@ -1,7 +1,7 @@
 ## Background
 
-This program uses historical quotes for SSD build costs from Offshore Design Manufacturers (ODM) to forecast future build costs.
-Currently, forecasting is done by computing the average build costs under these variables: "Subtotal = NRE+Qty*(BOM+MVA)" and "BOM+MVA Cost" by unique product codes. 
+This program uses historical quotes for SSD NPI build costs from Offshore Design Manufacturers (ODM) to forecast future build costs.
+Currently, forecasting is done by computing the average build costs under these variables: "Subtotal = NRE+Qty*(BOM+MVA)" and "BOM+MVA Cost" by product codes (unique product codes for builds automatically imply unique program families and ODMs). 
 Future capabilities can include using different summary statistics such as median, weighted mean, etc. for more advanced forecasting. 
 
 ## Instructions
@@ -23,13 +23,13 @@ Follow these steps to run the program:<br>
 
 (e). In the Python IDE, say Spyder, navigate to the File menu and open the ```functions.py``` and ```run.py``` files from the npi_quote_forecast repository<br>
 
-(f). Make the following modifications in the ```run.py``` file:<br>
+(f). Make the following parameter modifications in the ```run.py``` file:<br>
 * Change the read_file_path parameter to the path of the downloaded quote file<br>
 * Change the start and end work weeks (WW) in the ww_range parameter to the preferred range<br>
 * Change the build_status_allowed parameter to include or exclude any build statuses - DONE, NaN, WIP, etc.<br>
 * Change the write_file_path parameter to the path where the forecasted values should be written<br>
 
-(g). Execute the ```run.py``` file and view output in the write_file_path
+(g). Execute the ```run.py``` file in the Python IDE and view output in the write_file_path
 
 
 Contact aparna.komarla@solidigm.com with any questions or concerns.
