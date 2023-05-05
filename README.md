@@ -8,7 +8,7 @@ Future capabilities can include using different summary statistics such as media
 
 Data for the forecasting process is the NPI planners' quote files for two ODMs available here: 
 1. Pegatron: https://nandps.sharepoint.com/:f:/r/teams/NSG_NPI_Pegatron/Shared%20Documents/NSG_NPI_Pegatron-NPI%20QUOTES?csf=1&web=1&e=DbMRgg and 
-2. PTI HS:
+2. PTI HS: https://nandps.sharepoint.com/:f:/r/teams/NSG_NPI_PTITW/Shared%20Documents/NSG_NPI_PTITW-NPI%20Quote?csf=1&web=1&e=6emtpN
 
 
 Follow these steps to run the program:<br>
