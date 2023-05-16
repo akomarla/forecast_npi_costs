@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 27 13:09:30 2023
 
-@author: akomarla
-"""
 
 from functions import *
 
