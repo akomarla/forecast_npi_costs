@@ -1,3 +1,7 @@
+## Note
+
+This repository is now defunct. Please refer to https://github.com/solidigm-innersource/gbl_ops_data_analytics.npi.application.quote_forecasting for the latest code and data workflow.
+
 ## Background
 
 This program uses historical quotes for SSD NPI build costs from Offshore Design Manufacturers (ODM) to forecast future build costs.
