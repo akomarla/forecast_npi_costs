@@ -82,7 +82,7 @@ Cost forecasts are computed for a build unit using variables such as "BOM+MVA Co
 
 # Contributions 
 
-## Developer
+### I. Developer
 
 If you are a developer who wishes to make contributions to this repository, this section is for you.
 
@@ -100,7 +100,7 @@ Follow instructions to request access here: https://cdi-docs.corp.nandps.com/git
 5. GitHub write access for https://github.com/solidigm-innersource/gbl_ops_data_analytics.npi.application.quote_forecasting/ repository
 Follow instructions to request access here: https://cdi-docs.corp.nandps.com/github/gh-teams/
 
-## Visualization Developer
+### II. Visualization Developer
 
 If you are a visualization developer who wishes to make contributions to the Tableau dashboard, this section is for you.
 
