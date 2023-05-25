@@ -57,14 +57,14 @@ Data used for forecasting is the NPI planners' quote files for two ODMs:
 NPI planners manually drop quote files into the BI Shared Drive. Virtual machine uses it as input to execute the forecasting code. A Windows task scheduler is configured such that it executes at 15 minute intervals (hh:00, hh:15, hh:30, hh:45, hh+1:00 and so on). Output is written back to the BI Shared Drive for planners to use and for the Tableau dashboard to read.<br>
 Note: The dashboard also uses additional build plan data from the NPI_BP database. However, this data is not used for the forecasts. Forecasting is purely done using the ODM quote files.
 
-![Screenshot (43)](https://github.com/solidigm-innersource/gbl_ops_data_analytics.npi.application.quote_forecasting/assets/124313756/b2d49d1c-c53c-4eb8-9b54-40133409c662)
-
+<img src = "https://github.com/solidigm-innersource/gbl_ops_data_analytics.npi.application.quote_forecasting/assets/124313756/b2d49d1c-c53c-4eb8-9b54-40133409c662" width = "70%" height = "70%">
+     
 ## Forecasting
 
 Cost forecasts are computed for a build unit using variables such as "BOM+MVA Cost" or "Subtotal=NRE+Qty*(BOM+MVA)" in the ODM quote files. Currently, the code supports mean and weighted mean as two options to forecast the variable at a program family, product code or build ID level. The following outline is for the Pegatron ODM but the logic neatly follows for other ODMs such as PTI Taiwain.
 
-| Type | Param |             Description                | Default |
-| :--- | :--- | :-------------------------------------- | :----- |
+| Type | Param |             Short Description                | Default |
+| :--- | :--- | :-------------------------------------- | :--- |
 | `str` | `read_file_path` | Path of ODM quote file | "S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm" |
 | `list` | `ignore_sheets` | Sheets in input without quote data to be skipped during processing | ['Input', 'MainSheet'] |
 | `boolean` | `excel_output` | Generate output in Excel or not  | True |
