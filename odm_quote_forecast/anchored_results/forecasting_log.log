@@ -1,0 +1,360 @@
+2023-05-24 03:25:19,759 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:25:46,899 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 03:25:47,444 : INFO : functions : Data for ODM has been read from: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 03:25:48,311 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:25:48,951 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:25:49,495 : INFO : functions : Forecasting is complete forPEGATRON
+2023-05-24 03:25:57,583 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 03:25:59,555 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:25:59,555 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:26:33,979 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 03:26:33,979 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 03:26:34,819 : INFO : functions : Data for ODM has been read from: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 03:26:34,819 : INFO : functions : Data for ODM has been read from: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 03:26:35,767 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:26:35,767 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:26:36,567 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:26:36,567 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:26:37,212 : INFO : functions : Forecasting is complete forPTI TAIWAN
+2023-05-24 03:26:37,212 : INFO : functions : Forecasting is complete forPTI TAIWAN
+2023-05-24 03:26:44,763 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Quote Avgs.xlsx
+ -------
+2023-05-24 03:26:44,763 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Quote Avgs.xlsx
+ -------
+2023-05-24 03:34:52,290 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:34:52,290 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:34:52,290 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:35:18,049 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 03:35:18,049 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 03:35:18,049 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 03:35:19,017 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 03:35:19,017 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 03:35:19,017 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 03:35:20,368 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:35:20,368 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:35:20,368 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:35:21,274 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:35:21,274 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:35:21,274 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:35:22,295 : INFO : functions : Forecasting is complete forPEGATRON
+2023-05-24 03:35:22,295 : INFO : functions : Forecasting is complete forPEGATRON
+2023-05-24 03:35:22,295 : INFO : functions : Forecasting is complete forPEGATRON
+2023-05-24 03:35:30,280 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 03:35:30,280 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 03:35:30,280 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 03:35:32,385 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:35:32,385 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:35:32,385 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:35:32,385 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:36:13,240 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 03:36:13,240 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 03:36:13,240 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 03:36:13,240 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 03:36:14,287 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 03:36:14,287 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 03:36:14,287 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 03:36:14,287 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 03:36:16,144 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:36:16,144 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:36:16,144 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:36:16,144 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:36:17,592 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:36:17,592 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:36:17,592 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:36:17,592 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:36:18,821 : INFO : functions : Forecasting is complete forPTI TAIWAN
+2023-05-24 03:36:18,821 : INFO : functions : Forecasting is complete forPTI TAIWAN
+2023-05-24 03:36:18,821 : INFO : functions : Forecasting is complete forPTI TAIWAN
+2023-05-24 03:36:18,821 : INFO : functions : Forecasting is complete forPTI TAIWAN
+2023-05-24 03:36:28,547 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Quote Avgs.xlsx
+ -------
+2023-05-24 03:36:28,547 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Quote Avgs.xlsx
+ -------
+2023-05-24 03:36:28,547 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Quote Avgs.xlsx
+ -------
+2023-05-24 03:36:28,547 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Quote Avgs.xlsx
+ -------
+2023-05-24 03:54:31,694 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:54:31,694 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:54:31,694 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:54:31,694 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:54:31,694 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 03:55:37,765 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 03:55:37,765 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 03:55:37,765 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 03:55:37,765 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 03:55:37,765 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 03:55:38,735 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 03:55:38,735 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 03:55:38,735 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 03:55:38,735 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 03:55:38,735 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 03:55:40,006 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:55:40,006 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:55:40,006 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:55:40,006 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:55:40,006 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 03:55:41,279 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:55:41,279 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:55:41,279 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:55:41,279 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:55:41,279 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 03:55:42,458 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 03:55:42,458 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 03:55:42,458 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 03:55:42,458 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 03:55:42,458 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 03:55:52,134 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 03:55:52,134 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 03:55:52,134 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 03:55:52,134 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 03:55:52,134 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:08:25,196 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:08:25,196 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:08:25,196 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:08:25,196 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:08:25,196 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:08:25,196 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:09:16,704 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:09:16,704 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:09:16,704 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:09:16,704 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:09:16,704 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:09:16,704 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:09:18,450 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:09:18,450 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:09:18,450 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:09:18,450 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:09:18,450 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:09:18,450 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:09:21,379 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:09:21,379 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:09:21,379 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:09:21,379 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:09:21,379 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:09:21,379 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:09:22,641 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:09:22,641 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:09:22,641 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:09:22,641 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:09:22,641 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:09:22,641 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:09:24,116 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:09:24,116 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:09:24,116 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:09:24,116 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:09:24,116 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:09:24,116 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:09:33,232 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:09:33,232 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:09:33,232 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:09:33,232 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:09:33,232 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:09:33,232 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:12:51,534 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:12:51,534 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:12:51,534 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:12:51,534 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:12:51,534 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:12:51,534 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:12:51,534 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:13:52,983 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:13:52,983 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:13:52,983 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:13:52,983 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:13:52,983 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:13:52,983 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:13:52,983 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:13:54,819 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:13:54,819 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:13:54,819 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:13:54,819 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:13:54,819 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:13:54,819 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:13:54,819 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:13:56,927 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:13:56,927 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:13:56,927 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:13:56,927 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:13:56,927 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:13:56,927 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:13:56,927 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:13:58,299 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:13:58,299 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:13:58,299 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:13:58,299 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:13:58,299 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:13:58,299 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:13:58,299 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:14:00,255 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:14:00,255 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:14:00,255 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:14:00,255 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:14:00,255 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:14:00,255 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:14:00,255 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:14:09,370 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:14:09,370 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:14:09,370 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:14:09,370 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:14:09,370 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:14:09,370 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:14:09,370 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:15:54,435 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:15:54,435 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:15:54,435 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:15:54,435 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:15:54,435 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:15:54,435 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:15:54,435 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:15:54,435 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:17:10,823 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:17:10,823 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:17:10,823 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:17:10,823 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:17:10,823 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:17:10,823 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:17:10,823 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:17:10,823 : INFO : functions : Forecasting begins for PEGATRON
+2023-05-24 04:17:12,383 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:17:12,383 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:17:12,383 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:17:12,383 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:17:12,383 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:17:12,383 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:17:12,383 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:17:12,383 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm
+2023-05-24 04:17:14,550 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:17:14,550 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:17:14,550 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:17:14,550 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:17:14,550 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:17:14,550 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:17:14,550 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:17:14,550 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:17:16,254 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:17:16,254 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:17:16,254 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:17:16,254 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:17:16,254 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:17:16,254 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:17:16,254 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:17:16,254 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:17:17,789 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:17:17,789 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:17:17,789 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:17:17,789 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:17:17,789 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:17:17,789 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:17:17,789 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:17:17,789 : INFO : functions : Forecasting is complete for PEGATRON
+2023-05-24 04:17:26,754 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:17:26,754 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:17:26,754 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:17:26,754 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:17:26,754 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:17:26,754 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:17:26,754 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:17:26,754 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx
+ -------
+2023-05-24 04:17:29,429 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:17:29,429 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:17:29,429 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:17:29,429 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:17:29,429 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:17:29,429 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:17:29,429 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:17:29,429 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:17:29,429 : INFO : functions : Python script located in: C:\Users\akomarla\OneDrive - NANDPS\Desktop\Repos\gbl_ops_data_analytics.npi.application.quote_forecasting\code is being executed
+2023-05-24 04:18:19,829 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 04:18:19,829 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 04:18:19,829 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 04:18:19,829 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 04:18:19,829 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 04:18:19,829 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 04:18:19,829 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 04:18:19,829 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 04:18:19,829 : INFO : functions : Forecasting begins for PTI TAIWAN
+2023-05-24 04:18:22,019 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 04:18:22,019 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 04:18:22,019 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 04:18:22,019 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 04:18:22,019 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 04:18:22,019 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 04:18:22,019 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 04:18:22,019 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 04:18:22,019 : INFO : functions : Data for ODM has been read from: S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm PTI TW NPI Quote File.xlsm
+2023-05-24 04:18:24,612 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:18:24,612 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:18:24,612 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:18:24,612 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:18:24,612 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:18:24,612 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:18:24,612 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:18:24,612 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:18:24,612 : INFO : functions : WW filtered as greater than 202241 and less than 202253
+2023-05-24 04:18:26,707 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:18:26,707 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:18:26,707 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:18:26,707 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:18:26,707 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:18:26,707 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:18:26,707 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:18:26,707 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:18:26,707 : INFO : functions : Build statuses allowed are: ACTIVE, WIP, DONE
+2023-05-24 04:18:28,571 : INFO : functions : Forecasting is complete for PTI TAIWAN
+2023-05-24 04:18:28,571 : INFO : functions : Forecasting is complete for PTI TAIWAN
+2023-05-24 04:18:28,571 : INFO : functions : Forecasting is complete for PTI TAIWAN
+2023-05-24 04:18:28,571 : INFO : functions : Forecasting is complete for PTI TAIWAN
+2023-05-24 04:18:28,571 : INFO : functions : Forecasting is complete for PTI TAIWAN
+2023-05-24 04:18:28,571 : INFO : functions : Forecasting is complete for PTI TAIWAN
+2023-05-24 04:18:28,571 : INFO : functions : Forecasting is complete for PTI TAIWAN
+2023-05-24 04:18:28,571 : INFO : functions : Forecasting is complete for PTI TAIWAN
+2023-05-24 04:18:28,571 : INFO : functions : Forecasting is complete for PTI TAIWAN
+2023-05-24 04:18:37,067 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Forecasts.xlsx
+ -------
+2023-05-24 04:18:37,067 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Forecasts.xlsx
+ -------
+2023-05-24 04:18:37,067 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Forecasts.xlsx
+ -------
+2023-05-24 04:18:37,067 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Forecasts.xlsx
+ -------
+2023-05-24 04:18:37,067 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Forecasts.xlsx
+ -------
+2023-05-24 04:18:37,067 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Forecasts.xlsx
+ -------
+2023-05-24 04:18:37,067 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Forecasts.xlsx
+ -------
+2023-05-24 04:18:37,067 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Forecasts.xlsx
+ -------
+2023-05-24 04:18:37,067 : INFO : functions : Forecast output is written to: //npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI PTI Forecasts.xlsx
+ -------
