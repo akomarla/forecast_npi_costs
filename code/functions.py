@@ -102,10 +102,27 @@ def setup_logger(log_file_path):
     formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(name)s : %(message)s')
     file_handler.setFormatter(formatter)
     
-    # Add file handler to logger
-    logger.addHandler(file_handler)
+    # Add file handler to logger only if it does not exist already. Prevents log info being written multiple times
+    if not logger.hasHandlers():
+        logger.addHandler(file_handler)
+        
     return logger
+
+
+
+def test_code(ft_true, ft_test, cols):
+    # Modify true results and extract the columns for comparison only
+    ft_true = ft_true[cols].sort_values(by = cols[0], ascending = True)
+    ft_true.reset_index(inplace = True, drop = True)
+    ft_true = ft_true.round(2)
     
+    # Modify test results and extract the columns for comparison only
+    ft_test = ft_test[cols].sort_values(by = cols[0], ascending = True)
+    ft_test.reset_index(inplace = True, drop = True)
+    ft_test = ft_test.round(2)
+    # Check equality
+    return ft_test.equals(ft_true)
+
 
 
 def gen_odm_forecast(read_file_path, ignore_sheets, excel_output, write_file_path, log_file_path,
@@ -152,7 +169,7 @@ def gen_odm_forecast(read_file_path, ignore_sheets, excel_output, write_file_pat
                     ft_data.append(ft_dict)
     
     # Convert list of forecasts to a dataframe and coalesce so that there are no duplicate level values 
-    ft_odm = pd.DataFrame(ft_data).groupby(by = level).max().reset_index()
+    ft_odm = pd.DataFrame(ft_data).groupby(by = [level, 'Program']).max().reset_index()
     logger.info('WW filtered as greater than '+str(ww_range_allowed[0])+' and less than '+str(ww_range_allowed[-1]))
     logger.info('Build statuses allowed are: '+', '.join(build_status_allowed))
     logger.info('Forecasting is complete for '+site_name)
