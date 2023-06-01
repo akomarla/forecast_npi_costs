@@ -55,7 +55,7 @@ Data used for forecasting is the NPI planners' quote files for two ODMs:<br>
 NPI planners manually drop quote files into the BI Shared Drive. Virtual machine uses it as input to execute the forecasting code. A Windows task scheduler is configured such that it executes at 15 minute intervals (hh:00, hh:15, hh:30, hh:45, hh+1:00 and so on). Output is written back to the BI Shared Drive for planners to use and for the Tableau dashboard to read.<br>
 Note: The dashboard also uses additional build plan data from the NPI_BP database. However, this data is not used for the forecasts. Forecasting is purely done using the ODM quote files.
 
-<img src = "https://github.com/solidigm-innersource/gbl_ops_data_analytics.npi.application.quote_forecasting/assets/124313756/b2d49d1c-c53c-4eb8-9b54-40133409c662" width = "70%" height = "70%">
+<img src = "https://github.com/solidigm-innersource/gbl_ops_data_analytics.npi.application.quote_forecasting/assets/124313756/a4f5b8d3-0faa-4baf-895b-16aa5b34c887" width = "70%" height = "70%">
      
 ## Forecasting
 
