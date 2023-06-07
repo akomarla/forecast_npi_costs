@@ -59,7 +59,7 @@ Note: The dashboard also uses additional build plan data from the NPI_BP databas
      
 ## Forecasting
 
-Cost forecasts are computed for a build unit using variables such as "BOM+MVA Cost" or "Subtotal=NRE+Qty*(BOM+MVA)" in the ODM quote files. Currently, the code supports mean and weighted mean as two options to forecast the variable at a program family, product code or build ID level. The default parameter values are pertaining to the Pegatron ODM in this example but the logic neatly follows for other ODMs such as PTI Taiwain. Refer to the ```run.py``` and ```config.py``` to follow along. 
+Cost forecasts are computed for a build unit using variables such as "BOM+MVA Cost" or "Subtotal=NRE+Qty*(BOM+MVA)" in the ODM quote files. Currently, the code supports mean and weighted mean as two options to forecast the variable at a program family, product code or build ID level. The default parameter values are pertaining to the Pegatron ODM in this example but the logic neatly follows for other ODMs such as PTI Taiwan. Refer to the ```run.py``` and ```config.py``` to follow along. 
 
 | Data Type | Parameter |             Short Description                | Default Value |
 | :--- | :--- | :-------------------------------------- | :--- |
@@ -78,7 +78,7 @@ Cost forecasts are computed for a build unit using variables such as "BOM+MVA Co
 
 ## Testing
 
-The testing capability helps ensure that the forecasting code is working as it should by comparing the results with those computed by hand. The default parameter values are pertaining to the Pegatron ODM in this example but the logic neatly follows for other ODMs such as PTI Taiwain. Refer to the ```test.py``` and ```config.py``` to follow along. The following parameters are in addition to the forecasting parameters outlined above.
+The testing capability helps ensure that the forecasting code is working as it should by comparing the results with those computed by hand. The default parameter values are pertaining to the Pegatron ODM in this example but the logic neatly follows for other ODMs such as PTI Taiwan. Refer to the ```test.py``` and ```config.py``` to follow along. The following parameters are in addition to the forecasting parameters outlined above.
 
 | Data Type | Parameter |             Short Description                | Default Value |
 | :--- | :--- | :-------------------------------------- | :--- |
@@ -99,7 +99,7 @@ Request the following Access Profile through Sailpoint (Authenticate into Sailpo
 2. Virtual Machine<br>
 Machine Name: np-bemfgpsolv01<br>
 Username: CORP\svc-ts-npsg<br>
-Password: 5K8w$mO4<br>
+Password: ***** (Shared after access is approved) <br>
 Note: Machine is the same as the one used for the SCIPIO solver. Find more documentation on accessing the machine here: https://nandps-my.sharepoint.com/personal/gerrit_lensink_solidigmtechnology_com/Documents/Microsoft%20Teams%20Chat%20Files/Accessing%20SCIPIO%20Solve%20VMs%20and%20Directories.pdf
 3. GitHub account in solidigm-innersource organization<br>
 Follow instructions to request access here: https://cdi-docs.corp.nandps.com/github/gh-user-access/
@@ -117,7 +117,7 @@ Request the following Access Profile through Sailpoint (Authenticate into Sailpo
 2. Virtual Machine<br>
 Machine Name: np-bemfgpsolv01<br>
 Username: CORP\svc-ts-npsg<br>
-Password: 5K8w$mO4<br>
+Password: ***** (Shared after access is approved) <br>
 Note: Machine is the same as the one used for the SCIPIO solver. Find more documentation on accessing the machine here: https://nandps-my.sharepoint.com/personal/gerrit_lensink_solidigmtechnology_com/Documents/Microsoft%20Teams%20Chat%20Files/Accessing%20SCIPIO%20Solve%20VMs%20and%20Directories.pdf
 3. NPI_BP database and vCurr_BP data table<br>
 Follow instructions to request access here: http://np-ssws-dev01.corp.nandps.com/nps/info/NPS_Solidigm_info.htm#_Toc115087225
@@ -127,5 +127,5 @@ Follow instructions to obtain access here: [TableauDesktopLicenseActivation.pdf 
 
 # Contact
 
-Contact aparna.komarla@solidigm.com with any questions.
+Contact aparna.komarla@solidigm.com with any issues or questions.
  

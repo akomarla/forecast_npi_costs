@@ -21,7 +21,7 @@ pti_pegatron_name = 'PEGATRON and PTI TAIWAN'
 # Same for all ODMs
 ignore_sheets = ['Input', 'MainSheet']
 excel_output = True
-log_file_path = "S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/forecasting_log.log"
+log_file_path = "S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/data_processing.log"
 ww_range_allowed = [202241, 202253]
 ww_col = 'Req WW (WW enterd)'
 build_status_allowed = ['ACTIVE', 'WIP', 'DONE']
@@ -56,8 +56,16 @@ bp_database_name = 'nand'
 bp_table_name = 'NPI_BP.vCurrNPI_BP'
 
 # Merged data write path
-bp_forecast_write_file_path = "S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/Solidigm NPI BP and Forecasts.xlsx"
+bp_forecast_write_file_path = "S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI BP & Forecasts.xlsx"
 bp_forecast_select_cols = ['ODM', 'Status', 'Start_Qty', 'Product_Code', 'Build_ID', 'Required_Start_WW', 'Product Code', 'Program', 'Program Acronym',
 'Forecast for: BOM+MVA Cost (mean)', 'WW Start', 'WW End', 'Build Status Used', 'Forecast for: BOM+MVA Cost (weighted mean)', 'Forecast for: Subtotal = NRE+\nQty*(BOM+MVA) (mean)']
 
+###############################################################################
 
+# Calculations to be done on output data
+
+# Method and columns to be used
+calc_method = {'product': ['Start_Qty', 'Forecast for: BOM+MVA Cost (mean)']}
+calc_write_file_path = "S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI BP & Forecasts (calc included).xlsx"
+
+###############################################################################

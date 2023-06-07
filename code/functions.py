@@ -137,11 +137,11 @@ def read_table_sql_db(sql_server_name, database_name, table_name, log_file_path)
         # Select the entire table and store in a dataframe
         query = 'SELECT * FROM '+table_name+';'
         df = pd.read_sql(query, conn)
-        logger.info('Successfully read Table = '+table_name+' from database')
+        logger.info('Successfully read Table = '+table_name+' from database'+'\n -------')
     
     except:
-        logger.info('Could not connect to Server = '+sql_server_name+' and Database = '+database_name)
-        logger.info('Could not read Table = '+table_name+' from database')
+        logger.info('Could not connect to Server = '+sql_server_name+' and Database = '+database_name+'\n -------')
+        logger.info('Could not read Table = '+table_name+' from database'+'\n -------')
     
     return df 
 
@@ -207,7 +207,7 @@ def gen_odm_forecast(read_file_path, ignore_sheets, excel_output, write_file_pat
         ft_odm.to_excel(excel_writer = write_file_path, sheet_name = 'Forecasts for '+site_name)
         logger.info('Forecast output is written to: '+write_file_path+'\n -------')
     else:
-        logger.info('Forecast output is not written to any Excel or CSV output \n -------')
+        logger.info('Forecast output is calculated but not written to any Excel or CSV output \n -------')
 
     return ft_odm
 
@@ -235,9 +235,36 @@ def merge_bp_odm_forecast(bp_data, ft_odm, excel_output, write_file_path,
     if excel_output:
         df.to_excel(excel_writer = write_file_path, 
                     sheet_name = 'BP merged with forecasts')
-        logger.info('Build plan data and forecasts are merged and written to: '+write_file_path)
+        logger.info('Build plan data and forecasts are merged and written to: '+write_file_path+'\n -------')
     else:
         logger.info('Build plan data and forecasts are merged but not written to any Excel or CSV output \n -------')
     
     return df
 
+
+
+def append_calc(df, calc_method, excel_output, write_file_path, log_file_path):
+    # Set up logger and update
+    logger = setup_logger(log_file_path = log_file_path)
+    
+    # Loop through all methods for calculations on the dataframe columns
+    for how in calc_method.keys():
+        out_var = how.capitalize() + ' of ' + calc_method[how][0] + ' and ' + calc_method[how][1]
+        if how == 'product':
+            df[out_var] = df[calc_method[how][0]]*df[calc_method[how][1]]
+            logger.info(out_var+' has been calculated and added to the dataframe')
+        elif how == 'sum':
+            df[out_var] = df[calc_method[how][0]]+df[calc_method[how][1]]
+            logger.info(out_var+' has been calculated and added to the dataframe')
+        else:
+            logger.error('Method specified for calculation is not recognized')
+        
+    # Writing dataframe with calculations appended to an excel file
+    if excel_output:
+        df.to_excel(excel_writer = write_file_path, 
+                    sheet_name = 'Calculations')
+        logger.info(out_var+' has been calculated and written to: '+write_file_path+'\n -------')
+    else:
+        logger.info(out_var+' has been calculated and written to the dataframe but not to any Excel or CSV output \n -------')
+        
+    return df

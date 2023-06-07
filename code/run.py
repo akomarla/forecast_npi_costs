@@ -49,8 +49,14 @@ def main():
                                             write_file_path = bp_forecast_write_file_path, 
                                             select_cols = bp_forecast_select_cols, 
                                             log_file_path = log_file_path)
-
-
+    
+    # Adding calculations on the data that was merged from the build plan and ODMs
+    bp_odm_forecast_calc = append_calc(df = bp_odm_forecast, 
+                                       calc_method = calc_method, 
+                                       excel_output = excel_output,
+                                       write_file_path = calc_write_file_path, 
+                                       log_file_path = log_file_path)
+    
     
 if __name__ == "__main__":
     print('Executing file')
