@@ -21,6 +21,49 @@ def filter_ww(df, ww_range_allowed, ww_col):
     return df
 
 
+def gen_time_period(ww, how, period_range):
+    # Get abbreviation of the type of date cut: quarter, monthly, yearly, etc
+    abbr = how[0].capitalize()
+    ww = str(ww)
+    # Loop through all periods 
+    for cut in period_range:
+        try: 
+            # Check if ww is in the start and end ww range
+            if (int(ww[-2:]) >= cut[0]) and (int(ww[-2:]) <= cut[1]):
+                return ww[0:4]+' '+abbr+str(period_range.index(cut)+1)
+            # Check every range to see if ww lies in it
+            else:
+                continue
+        except:
+            return None
+
+
+def set_time_period(df, organize_ww_cols, organize_ww_by):
+    # Loop through all methods for time period segmentation
+    for how in organize_ww_by.keys():
+        # Loop through all columns with ww data to be modified
+        for col in organize_ww_cols:
+            # Apply the time period to every ww value
+            df[col+' ('+how+')'] = df[col].apply(gen_time_period, how = how, period_range = organize_ww_by[how])
+    return df
+           
+
+def gen_acronym_map(read_file_path, col_in, col_out):
+    # Read acronymn mapping as a dataframe
+    acronym_map = pd.read_excel(read_file_path)
+    # Convert dataframe row:col mapping to dictionary
+    acronym_dict = {}
+    for val in acronym_map[col_in]:
+        acronym_dict[val] = acronym_map[acronym_map[col_in] == val][col_out].iloc[0]
+    return acronym_dict
+    
+
+def apply_acronym_map(df, acronym_dict, col_in, col_out):
+    # Apply dictionary mapping to column in dataframe
+    df[col_out] = df[col_in].map(acronym_dict)
+    return df
+    
+
 def filter_build_status(df, build_status_allowed):
     # Extract data with appropriate build statuses only
     df = df.rename(columns={df.columns[1]: 'Build Status'})
@@ -28,7 +71,6 @@ def filter_build_status(df, build_status_allowed):
     df = df[df['Build Status'].isin(build_status_allowed)]
     df.reset_index(drop = True, inplace = True)
     return df
-
 
 
 def weighted_mean(values, weights):
@@ -44,7 +86,6 @@ def weighted_mean(values, weights):
     # Compute weighted average ignoring NaN values
     wm = np.average(values[valid_indices], weights = weights[valid_indices])
     return wm
-
 
 
 def compute_forecast(values, weights, how):
@@ -71,7 +112,6 @@ def compute_forecast(values, weights, how):
             
     return ft
     
-        
 
 def join_odm_data(write_file_path, site_name, list_odm_data, excel_output):
     # Combine data from multiple ODMs
@@ -84,11 +124,10 @@ def join_odm_data(write_file_path, site_name, list_odm_data, excel_output):
     
     # Write output to Excel
     if excel_output:
-       all_odm_data.to_excel(excel_writer = write_file_path, sheet_name = 'Forecasts for '+ site_name)
+       all_odm_data.to_excel(excel_writer = write_file_path, sheet_name = 'Forecasts for '+ site_name, index = False)
     
     return all_odm_data
         
-
 
 def setup_logger(log_file_path):
     # Create and configure logger
@@ -107,7 +146,6 @@ def setup_logger(log_file_path):
     return logger
 
 
-
 def test_code(ft_true, ft_test, cols):
     # Modify true results and extract the columns for comparison only
     ft_true = ft_true[cols].sort_values(by = cols[0], ascending = True)
@@ -120,7 +158,6 @@ def test_code(ft_true, ft_test, cols):
     ft_test = ft_test.round(2)
     # Check equality
     return ft_test.equals(ft_true)
-
 
 
 def read_table_sql_db(sql_server_name, database_name, table_name, log_file_path):
@@ -146,10 +183,9 @@ def read_table_sql_db(sql_server_name, database_name, table_name, log_file_path)
     return df 
 
 
-
 def gen_odm_forecast(read_file_path, ignore_sheets, excel_output, write_file_path, log_file_path,
                      site_name, ww_range_allowed, ww_col, build_status_allowed, 
-                     level, ft_method, weight_col):
+                     level, ft_method, weight_col, po_col, quote_tracking_col):
     
     # Create and configure logger
     logger = setup_logger(log_file_path = log_file_path)
@@ -188,11 +224,22 @@ def gen_odm_forecast(read_file_path, ignore_sheets, excel_output, write_file_pat
                                               weights = program_data[program_data[level] == val][weight_col],
                                               how = how)
                         
+                        # Extract PO numbers at the forecast level
+                        po = ', '.join(program_data[program_data[level] == val][po_col].drop_duplicates().fillna('NaN').astype('string'))
+                        # Extract quote tracking numbers
+                        qt = ', '.join(program_data[program_data[level] == val][quote_tracking_col].drop_duplicates().fillna('NaN').astype('string'))
+
                         # Create a dictionary of forecasted values at each iteration
-                        ft_dict = {'ODM': site_name, 'Program Acronym': program_acr, 'Program': program, 
-                                   level: val, 'Forecast for: '+var+' ('+how+')': ft,
-                                 'WW Start': ww_range_allowed[0], 'WW End': ww_range_allowed[-1],
-                                 'Build Status Used':', '.join(build_status_allowed)}
+                        ft_dict = {'ODM': site_name, 
+                                   'Program Acronym': program_acr, 
+                                   'Program': program, 
+                                   level: val, 
+                                   'Forecast for: '+var+' ('+how+')': ft, 
+                                   'Forecast WW Start': ww_range_allowed[0], 
+                                   'Forecast WW End': ww_range_allowed[-1],
+                                   'Build Status Used':', '.join(build_status_allowed), 
+                                   'PO Numbers Used': po, 
+                                   'Quote Tracking Numbers Used': qt}
                         # Add the dictionary to a list
                         ft_data.append(ft_dict)
     
@@ -204,7 +251,7 @@ def gen_odm_forecast(read_file_path, ignore_sheets, excel_output, write_file_pat
     
     # Write to an excel file if requested
     if excel_output:
-        ft_odm.to_excel(excel_writer = write_file_path, sheet_name = 'Forecasts for '+site_name)
+        ft_odm.to_excel(excel_writer = write_file_path, sheet_name = 'Forecasts for '+site_name, index = False)
         logger.info('Forecast output is written to: '+write_file_path+'\n -------')
     else:
         logger.info('Forecast output is calculated but not written to any Excel or CSV output \n -------')
@@ -212,17 +259,15 @@ def gen_odm_forecast(read_file_path, ignore_sheets, excel_output, write_file_pat
     return ft_odm
 
 
-
-def merge_bp_odm_forecast(bp_data, ft_odm, excel_output, write_file_path, 
-                          select_cols, log_file_path):
+def merge_bp_odm_forecast(bp_data, ft_odm, excel_output, write_file_path, select_cols, log_file_path):
     # Set up logger and update
     logger = setup_logger(log_file_path = log_file_path)
     
     # Merge the build plan (bp) with the forecasts on ODM site, product codes and program family names
     try: 
-        df = bp_data.merge(ft_odm, how = 'outer', 
-                           left_on = ['ODM', 'Product_Code', 'Family'], 
-                           right_on = ['ODM', 'Product Code', 'Program'])
+        df = bp_data.merge(ft_odm, how = 'left', 
+                                left_on = ['ODM', 'Product_Code', 'Family'], 
+                                right_on = ['ODM', 'Product Code', 'Program'])
         logger.info('Build plan data and corresponding forecasts are successfully merged')
     except:
         logger.info('Error merging build plan data and corresponding forecasts')
@@ -234,13 +279,13 @@ def merge_bp_odm_forecast(bp_data, ft_odm, excel_output, write_file_path,
     # Write to an excel file and log
     if excel_output:
         df.to_excel(excel_writer = write_file_path, 
-                    sheet_name = 'BP merged with forecasts')
+                    sheet_name = 'BP merged with forecasts',
+                    index = False)
         logger.info('Build plan data and forecasts are merged and written to: '+write_file_path+'\n -------')
     else:
         logger.info('Build plan data and forecasts are merged but not written to any Excel or CSV output \n -------')
     
     return df
-
 
 
 def append_calc(df, calc_method, excel_output, write_file_path, log_file_path):
@@ -249,20 +294,22 @@ def append_calc(df, calc_method, excel_output, write_file_path, log_file_path):
     
     # Loop through all methods for calculations on the dataframe columns
     for how in calc_method.keys():
-        out_var = how.capitalize() + ' of ' + calc_method[how][0] + ' and ' + calc_method[how][1]
-        if how == 'product':
-            df[out_var] = df[calc_method[how][0]]*df[calc_method[how][1]]
-            logger.info(out_var+' has been calculated and added to the dataframe')
-        elif how == 'sum':
-            df[out_var] = df[calc_method[how][0]]+df[calc_method[how][1]]
-            logger.info(out_var+' has been calculated and added to the dataframe')
-        else:
-            logger.error('Method specified for calculation is not recognized')
-        
+        for var_pair in calc_method[how]:
+            out_var = how.capitalize() + ' of ' + var_pair[0] + ' and ' + var_pair[1]
+            if how == 'product':
+                df[out_var] = df[var_pair[0]] * df[var_pair[1]]
+                logger.info(out_var+' has been calculated and added to the dataframe')
+            elif how == 'sum':
+                df[out_var] = df[var_pair[0]] + df[var_pair[1]]
+                logger.info(out_var+' has been calculated and added to the dataframe')
+            else:
+                logger.error('Method specified for calculation is not recognized')
+            
     # Writing dataframe with calculations appended to an excel file
     if excel_output:
         df.to_excel(excel_writer = write_file_path, 
-                    sheet_name = 'Calculations')
+                    sheet_name = 'Calculations',
+                    index = False)
         logger.info(out_var+' has been calculated and written to: '+write_file_path+'\n -------')
     else:
         logger.info(out_var+' has been calculated and written to the dataframe but not to any Excel or CSV output \n -------')

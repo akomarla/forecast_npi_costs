@@ -12,12 +12,14 @@ def main():
                                           write_file_path = pegatron_write_file_path,
                                           log_file_path = log_file_path,
                                           site_name = pegatron_name, 
-                                          ww_range_allowed = ww_range_allowed, 
+                                          ww_range_allowed = use_ww_range, 
                                           ww_col = ww_col, 
                                           build_status_allowed = build_status_allowed, 
                                           level = level, 
                                           ft_method = ft_method,
-                                          weight_col = weight_col)
+                                          weight_col = weight_col,
+                                          po_col = po_col,
+                                          quote_tracking_col = quote_tracking_col)
 
     # Forecasting PTI ODM
     pti_forecasts = gen_odm_forecast(read_file_path = pti_read_file_path,
@@ -26,12 +28,14 @@ def main():
                                      write_file_path = pti_write_file_path,
                                      log_file_path = log_file_path,
                                      site_name = pti_name, 
-                                     ww_range_allowed = ww_range_allowed, 
+                                     ww_range_allowed = use_ww_range, 
                                      ww_col = ww_col, 
                                      build_status_allowed = build_status_allowed, 
                                      level = level, 
                                      ft_method = ft_method,
-                                     weight_col = weight_col)
+                                     weight_col = weight_col,
+                                     po_col = po_col,
+                                     quote_tracking_col = quote_tracking_col)
     
     # Combining forecast data for both ODMs
     pegatron_pti_forecasts = join_odm_data(write_file_path = pti_pegatron_write_file_path,
@@ -39,7 +43,7 @@ def main():
                                            list_odm_data = [pegatron_forecasts, pti_forecasts],
                                            excel_output = excel_output)
     
-    # Combining build plan data with forecasts for both ODMs
+    # Combining build plan data from SQL database with forecasts for both ODMs
     bp_odm_forecast = merge_bp_odm_forecast(bp_data = read_table_sql_db(sql_server_name = bp_sql_server_name, 
                                                                         database_name = bp_database_name, 
                                                                         table_name = bp_table_name,
@@ -49,6 +53,16 @@ def main():
                                             write_file_path = bp_forecast_write_file_path, 
                                             select_cols = bp_forecast_select_cols, 
                                             log_file_path = log_file_path)
+    
+    # Adding quarters to build plan and forecast data
+    bp_odm_forecast = set_time_period(df = bp_odm_forecast, 
+                                      organize_ww_cols = organize_ww_cols, 
+                                      organize_ww_by = organize_ww_by)
+    
+    bp_odm_forecast = apply_acronym_map(df = bp_odm_forecast, 
+                                        acronym_dict = gen_acronym_map(read_file_path = acronym_read_file_path, col_in = 'Program', col_out = 'Display_Name'), 
+                                        col_in = 'Family', 
+                                        col_out = 'Program Acronym')
     
     # Adding calculations on the data that was merged from the build plan and ODMs
     bp_odm_forecast_calc = append_calc(df = bp_odm_forecast, 

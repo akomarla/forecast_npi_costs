@@ -1,0 +1,1 @@
+"C:\Python\Python310\python.exe" "S:\Global Supply Planning\gbl_ops_data_analytics.npi.application.quote_forecasting\code\run.py"
