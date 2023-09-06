@@ -5,6 +5,7 @@ import numpy as np
 import logging
 import os
 import pyodbc as po
+from datetime import datetime
 
 
 def set_site_name(df, site_name):
@@ -38,31 +39,81 @@ def gen_time_period(ww, how, period_range):
             return None
 
 
-def set_time_period(df, organize_ww_cols, organize_ww_by):
+def set_time_period(df, organize_ww_cols, organize_ww_by, log_file_path):
+    # Set up logger and update
+    logger = setup_logger(log_file_path = log_file_path)
+    
     # Loop through all methods for time period segmentation
     for how in organize_ww_by.keys():
         # Loop through all columns with ww data to be modified
         for col in organize_ww_cols:
             # Apply the time period to every ww value
             df[col+' ('+how+')'] = df[col].apply(gen_time_period, how = how, period_range = organize_ww_by[how])
+            # Add info to logger
+            logger.info('WW values in '+col+' have been sliced by '+how+' and added to a new column named '+col+' ('+how+')')
     return df
            
 
-def gen_acronym_map(read_file_path, col_in, col_out):
-    # Read acronymn mapping as a dataframe
+def gen_acronym_map(read_file_path, col_in, col_out, log_file_path):
+    # Set up logger and update
+    logger = setup_logger(log_file_path = log_file_path)
+    
+    # Read acronymns as a dataframe
     acronym_map = pd.read_excel(read_file_path)
-    # Convert dataframe row:col mapping to dictionary
+    # Convert dataframe row:col mapping to dictionary key:value pairs
     acronym_dict = {}
     for val in acronym_map[col_in]:
         acronym_dict[val] = acronym_map[acronym_map[col_in] == val][col_out].iloc[0]
+    
+    # Add information to logger 
+    logger.info('Acronym map generated using the following columns: '+col_in+' and '+col_out+' in the mappings Excel file located in '+read_file_path)
+    logger.info('If you notice missing program family acronyms, please update the Excel file located in '+read_file_path)
+    
     return acronym_dict
     
 
-def apply_acronym_map(df, acronym_dict, col_in, col_out):
+def apply_acronym_map(df, acronym_dict, col_in, col_out, log_file_path):
+    # Set up logger and update
+    logger = setup_logger(log_file_path = log_file_path)
     # Apply dictionary mapping to column in dataframe
     df[col_out] = df[col_in].map(acronym_dict)
+    # Add information to logger 
+    logger.info('Applied program family and acronym mappings to the output')
     return df
+
+
+def append_datetime(df, log_file_path, datetime_col = 'Execution datetime'):
+    # Set up logger and update
+    logger = setup_logger(log_file_path = log_file_path)
     
+    # Get the current time in Y-M-D-h-m-s format
+    exec_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # Add the execution date and time to the specified column in the output data
+    df[datetime_col] = exec_datetime
+    
+    # Add information to logger
+    logger.info('Current execution date and time (forecast generated and build plan read) is '+exec_datetime+' and has been added to the output')
+    return df
+
+
+def gen_calc(df, calc_method, log_file_path):
+    # Set up logger and update
+    logger = setup_logger(log_file_path = log_file_path)
+    
+    # Loop through all methods for calculations on the dataframe columns
+    for how in calc_method.keys():
+        for var_pair in calc_method[how]:
+            out_var = how.capitalize() + ' of ' + var_pair[0] + ' and ' + var_pair[1]
+            if how == 'product':
+                df[out_var] = df[var_pair[0]] * df[var_pair[1]]
+                logger.info(out_var+' has been calculated and added to the output')
+            elif how == 'sum':
+                df[out_var] = df[var_pair[0]] + df[var_pair[1]]
+                logger.info(out_var+' has been calculated and added to the output')
+            else:
+                logger.error('Method specified for calculation is not recognized')
+    return df
+
 
 def filter_build_status(df, build_status_allowed):
     # Extract data with appropriate build statuses only
@@ -288,30 +339,50 @@ def merge_bp_odm_forecast(bp_data, ft_odm, excel_output, write_file_path, select
     return df
 
 
-def append_calc(df, calc_method, excel_output, write_file_path, log_file_path):
+
+def mod_bp_odm_forecast(df, calc_method, 
+                        organize_ww_cols, organize_ww_by,
+                        acronym_read_file_path, program_read_col, acronym_read_col, program_write_col, acronym_write_col,
+                        log_file_path, excel_output, write_file_path):
+    
+    # Adding quarters to build plan and forecast data
+    df = set_time_period(df = df, 
+                         organize_ww_cols = organize_ww_cols, 
+                         organize_ww_by = organize_ww_by, 
+                         log_file_path = log_file_path)
+    
+    # Generate acronym mapping 
+    acronym_dict = gen_acronym_map(read_file_path = acronym_read_file_path, 
+                                   col_in = program_read_col, 
+                                   col_out = acronym_read_col, 
+                                   log_file_path = log_file_path)
+    
+    # Map program families in the output data to acronyms using the dictionary
+    df = apply_acronym_map(df = df, 
+                           acronym_dict = acronym_dict, 
+                           col_in = program_write_col, 
+                           col_out = acronym_write_col, 
+                           log_file_path = log_file_path)
+    
+    # Get the current timestamp and add it to the results
+    df = append_datetime(df = df, 
+                         log_file_path = log_file_path)
+    
+    # Loop through all methods for calculations on the dataframe columns
+    df = gen_calc(df = df, 
+                  calc_method = calc_method, 
+                  log_file_path = log_file_path)
+    
     # Set up logger and update
     logger = setup_logger(log_file_path = log_file_path)
     
-    # Loop through all methods for calculations on the dataframe columns
-    for how in calc_method.keys():
-        for var_pair in calc_method[how]:
-            out_var = how.capitalize() + ' of ' + var_pair[0] + ' and ' + var_pair[1]
-            if how == 'product':
-                df[out_var] = df[var_pair[0]] * df[var_pair[1]]
-                logger.info(out_var+' has been calculated and added to the dataframe')
-            elif how == 'sum':
-                df[out_var] = df[var_pair[0]] + df[var_pair[1]]
-                logger.info(out_var+' has been calculated and added to the dataframe')
-            else:
-                logger.error('Method specified for calculation is not recognized')
-            
     # Writing dataframe with calculations appended to an excel file
     if excel_output:
         df.to_excel(excel_writer = write_file_path, 
                     sheet_name = 'Calculations',
                     index = False)
-        logger.info(out_var+' has been calculated and written to: '+write_file_path+'\n -------')
+        logger.info('Forecasts, calculations, time stamp and program family acronyms have been added to the build plan and written to: '+write_file_path+'\n -------')
     else:
-        logger.info(out_var+' has been calculated and written to the dataframe but not to any Excel or CSV output \n -------')
-        
+        logger.info('Forecasts, calculations, time stamp and program family acronyms have been computed but not written to any Excel or CSV output. Set excel_output = True to change this behavior \n -------')
     return df
+

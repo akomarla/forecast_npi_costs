@@ -54,22 +54,19 @@ def main():
                                             select_cols = bp_forecast_select_cols, 
                                             log_file_path = log_file_path)
     
-    # Adding quarters to build plan and forecast data
-    bp_odm_forecast = set_time_period(df = bp_odm_forecast, 
-                                      organize_ww_cols = organize_ww_cols, 
-                                      organize_ww_by = organize_ww_by)
-    
-    bp_odm_forecast = apply_acronym_map(df = bp_odm_forecast, 
-                                        acronym_dict = gen_acronym_map(read_file_path = acronym_read_file_path, col_in = 'Program', col_out = 'Display_Name'), 
-                                        col_in = 'Family', 
-                                        col_out = 'Program Acronym')
-    
-    # Adding calculations on the data that was merged from the build plan and ODMs
-    bp_odm_forecast_calc = append_calc(df = bp_odm_forecast, 
-                                       calc_method = calc_method, 
-                                       excel_output = excel_output,
-                                       write_file_path = calc_write_file_path, 
-                                       log_file_path = log_file_path)
+    # Adding calculations, forecast time stamp, slice WWs and write output to Excel
+    bp_odm_forecast = mod_bp_odm_forecast(df = bp_odm_forecast, 
+                                          calc_method = calc_method, 
+                                          organize_ww_cols = organize_ww_cols, 
+                                          organize_ww_by = organize_ww_by,
+                                          acronym_read_file_path = acronym_read_file_path,  
+                                          program_read_col = program_read_col, 
+                                          acronym_read_col = acronym_read_col, 
+                                          program_write_col = program_write_col, 
+                                          acronym_write_col = acronym_write_col,
+                                          excel_output = excel_output, 
+                                          write_file_path = calc_write_file_path,
+                                          log_file_path = log_file_path)
     
     
 if __name__ == "__main__":
