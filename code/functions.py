@@ -22,9 +22,9 @@ def filter_ww(df, ww_range_allowed, ww_col):
     return df
 
 
-def gen_time_period(ww, how, period_range):
+def gen_time_period(ww, by, period_range):
     # Get abbreviation of the type of date cut: quarter, monthly, yearly, etc
-    abbr = how[0].capitalize()
+    abbr = by[0].capitalize()
     ww = str(ww)
     # Loop through all periods 
     for cut in period_range:
@@ -39,18 +39,35 @@ def gen_time_period(ww, how, period_range):
             return None
 
 
-def set_time_period(df, organize_ww_cols, organize_ww_by, log_file_path):
+def map_vals(df, col_a, col_b, val):
+    # Try to return value of a column that is in the same row as another 
+    try:
+        return df[df[col_a] == int(val)][col_b].iloc[0]
+    except:
+        return np.nan
+    
+    
+def set_time_period(df, ww_cols, how, ww_map, log_file_path, by = None):
     # Set up logger and update
     logger = setup_logger(log_file_path = log_file_path)
     
-    # Loop through all methods for time period segmentation
-    for how in organize_ww_by.keys():
-        # Loop through all columns with ww data to be modified
-        for col in organize_ww_cols:
-            # Apply the time period to every ww value
-            df[col+' ('+how+')'] = df[col].apply(gen_time_period, how = how, period_range = organize_ww_by[how])
-            # Add info to logger
-            logger.info('WW values in '+col+' have been sliced by '+how+' and added to a new column named '+col+' ('+how+')')
+    if how == 'calc':
+        if isinstance(ww_map, dict):
+            # Loop through all methods for time period segmentation
+            for by in ww_map.keys():
+                # Loop through all columns with ww data to be modified
+                for col in ww_cols:
+                    # Apply the time period to every ww value
+                    df[col+' ('+by+')'] = df[col].apply(gen_time_period, by = by, period_range = ww_map[by])
+                    # Add info to logger
+                    logger.info('WW values in '+col+' have been sliced by '+by+' and added to a new column named '+col+' ('+by+')')
+        
+    elif how == 'fixed':
+        if isinstance(ww_map, pd.DataFrame):
+            # Loop through all columns with ww data to be modified
+            for col in ww_cols:
+                df[col+' ('+by+')'] = df[col].apply(lambda x: map_vals(df = ww_map, col_a = 'week', col_b = by, val = x))
+                logger.info('WW values in '+col+' have been sliced by '+by+' and added to a new column named '+col+' ('+by+')')
     return df
            
 
@@ -211,9 +228,10 @@ def test_code(ft_true, ft_test, cols):
     return ft_test.equals(ft_true)
 
 
-def read_table_sql_db(sql_server_name, database_name, table_name, log_file_path):
+def read_table_sql_db(sql_server_name, database_name, table_name, log_file_path = None):
     # Set up logger and update
-    logger = setup_logger(log_file_path = log_file_path)
+    if log_file_path:
+        logger = setup_logger(log_file_path = log_file_path)
     
     try:
         # Connect to the SQL database that contains the desired table
@@ -221,15 +239,18 @@ def read_table_sql_db(sql_server_name, database_name, table_name, log_file_path)
                          'Server='+sql_server_name+';'
                          'Database='+database_name+';'
                          'Trusted_Connection=yes;')
-        logger.info('Successfully connected to Server = '+sql_server_name+' and Database = '+database_name)
+        if log_file_path:
+            logger.info('Successfully connected to Server = '+sql_server_name+' and Database = '+database_name)
         # Select the entire table and store in a dataframe
         query = 'SELECT * FROM '+table_name+';'
         df = pd.read_sql(query, conn)
-        logger.info('Successfully read Table = '+table_name+' from database'+'\n -------')
+        if log_file_path:
+            logger.info('Successfully read Table = '+table_name+' from database'+'\n -------')
     
     except:
-        logger.info('Could not connect to Server = '+sql_server_name+' and Database = '+database_name+'\n -------')
-        logger.info('Could not read Table = '+table_name+' from database'+'\n -------')
+        if log_file_path:
+            logger.info('Could not connect to Server = '+sql_server_name+' and Database = '+database_name+'\n -------')
+            logger.info('Could not read Table = '+table_name+' from database'+'\n -------')
     
     return df 
 
@@ -341,15 +362,17 @@ def merge_bp_odm_forecast(bp_data, ft_odm, excel_output, write_file_path, select
 
 
 def mod_bp_odm_forecast(df, calc_method, 
-                        organize_ww_cols, organize_ww_by,
+                        ww_cols, org_ww_by, org_ww_method, ww_map,
                         acronym_read_file_path, program_read_col, acronym_read_col, program_write_col, acronym_write_col,
                         log_file_path, excel_output, write_file_path):
     
     # Adding quarters to build plan and forecast data
     df = set_time_period(df = df, 
-                         organize_ww_cols = organize_ww_cols, 
-                         organize_ww_by = organize_ww_by, 
-                         log_file_path = log_file_path)
+                         ww_cols = ww_cols, 
+                         how = org_ww_method, 
+                         ww_map = ww_map, 
+                         log_file_path = log_file_path, 
+                         by = org_ww_by)
     
     # Generate acronym mapping 
     acronym_dict = gen_acronym_map(read_file_path = acronym_read_file_path, 

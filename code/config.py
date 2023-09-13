@@ -35,8 +35,13 @@ quote_tracking_col = 'Quote Tracking #'
 
 # Organizing WW values by quarter, monthly, etc.
 
-organize_ww_by = {'Quarter': [(1, 13), (14, 26), (27, 39), (40, 53)]}
-organize_ww_cols = ['Required_Start_WW']
+ww_map = {'Quarter': [(1, 13), (14, 26), (27, 39), (40, 53)]}
+org_ww_method = 'fixed'
+org_ww_by = 'year_quarter'
+ww_cols = ['Required_Start_WW']
+ww_sql_server_name = 'goapps-sql.corp.nandps.com, 1433'
+ww_database_name = 'ssbi_report_stage'
+ww_table_name = 'vRpt_Dim_TimeWeek_Simple'
 
 ###############################################################################
 
