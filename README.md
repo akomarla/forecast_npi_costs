@@ -1,5 +1,6 @@
 # Background
 
+<img src= "https://github.com/akomarla/npi_sightings_prediction/assets/124313756/41620e8b-25bb-4551-bcbb-b15f71515f28" width = "10%" height = "10%">
 Forecasting future Solid State Drive (SSD) New Product Introduction (NPI) build costs ($) using historical quotes from Offshore Design Manufacturers (ODM) to enable data-driven financial budget planning.  Summary statistics such as mean or weighted mean are used to compute per unit build costs at a product code or program family level. NPI planners may use forecasted values returned in Excel format or view the Tableau dashboard for decison making. 
 
 # Instructions
