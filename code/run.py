@@ -69,6 +69,11 @@ def main():
                                           acronym_read_col = acronym_read_col, 
                                           program_write_col = program_write_col, 
                                           acronym_write_col = acronym_write_col,
+                                          po_read_file_path = po_read_file_path, 
+                                          build_col = bp_build_col, 
+                                          po_build_col = po_build_col,
+                                          deb_col = deb_col,
+                                          milestone_col = milestone_col,
                                           excel_output = excel_output, 
                                           write_file_path = calc_write_file_path,
                                           log_file_path = log_file_path)

@@ -214,6 +214,36 @@ def setup_logger(log_file_path):
     return logger
 
 
+def id_builds_open_po(df, build_col, po_read_file_path, po_build_col):
+    # Read the open PO report
+    po = pd.read_excel(po_read_file_path, 'Sheet1')
+    # Get the build IDs that are in the open PO report
+    po_builds = po[po_build_col].unique()
+    yn = []
+    for i, row in df.iterrows():
+        # Check if each build ID in the build plan is in the open PO report
+        if row[build_col] in po_builds:
+            yn.append('Yes')
+        else:
+            yn.append('No')
+    # Add results to the build plan
+    df['Open_PO'] = yn
+    return df
+            
+
+def id_deb_milestone(df, build_col, milestone_col, deb_col):
+    # Initialize empty list to store whether build ID has 'DEB' or not
+    deb = []
+    for i, row in df.iterrows():
+        if ('DEB' in row[build_col]) or (row[milestone_col] == 'DEB'):
+            deb.append('Yes')
+        else:
+            deb.append('No')
+    # Store DEB column in df
+    df[deb_col] = deb
+    return df
+    
+    
 def test_code(ft_true, ft_test, cols):
     # Modify true results and extract the columns for comparison only
     ft_true = ft_true[cols].sort_values(by = cols[0], ascending = True)
@@ -364,6 +394,8 @@ def merge_bp_odm_forecast(bp_data, ft_odm, excel_output, write_file_path, select
 def mod_bp_odm_forecast(df, calc_method, 
                         ww_cols, org_ww_by, org_ww_method, ww_map,
                         acronym_read_file_path, program_read_col, acronym_read_col, program_write_col, acronym_write_col,
+                        po_read_file_path, build_col, po_build_col,
+                        deb_col, milestone_col,
                         log_file_path, excel_output, write_file_path):
     
     # Adding quarters to build plan and forecast data
@@ -395,6 +427,18 @@ def mod_bp_odm_forecast(df, calc_method,
     df = gen_calc(df = df, 
                   calc_method = calc_method, 
                   log_file_path = log_file_path)
+    
+    # Add Yes/No to indicate whether build is in the open PO report or not
+    df = id_builds_open_po(df = df, 
+                           build_col = build_col, 
+                           po_read_file_path = po_read_file_path, 
+                           po_build_col = po_build_col)
+    
+    # Add Yes/No to deb column to indiciate whether build has a DEB milestone or not
+    df = id_deb_milestone(df = df, 
+                          build_col = build_col, 
+                          milestone_col = milestone_col,
+                          deb_col = deb_col)
     
     # Set up logger and update
     logger = setup_logger(log_file_path = log_file_path)

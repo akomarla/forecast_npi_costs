@@ -84,6 +84,26 @@ program_write_col = 'Family'
 
 ###############################################################################
 
+# Open PO builds to be added to output data
+
+# PO read file path
+po_read_file_path = "S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_open_po/NPI Build Cost Open PO Report.xlsx"
+# Name of column with build IDs that are currently open
+po_build_col = 'Short Text'
+# Name of column with build IDs in the build plan
+bp_build_col = 'Build_ID'
+
+###############################################################################
+
+# Check if builds are DEB to output data
+
+# New DEB column to add Yes/No values to
+deb_col = 'Milestone_DEB'
+milestone_col = 'Milestone'
+
+###############################################################################
+
+
 # Testing forecasting output
 
 # Pegatron file paths for test data and true results computed by hand
