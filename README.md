@@ -192,8 +192,7 @@ Note: Machine is the same as the one used for the SCIPIO solver. Find more docum
 3. NPI_BP database and vCurr_BP data table<br>
 Follow instructions to request access here: http://np-ssws-dev01.corp.nandps.com/nps/info/NPS_Solidigm_info.htm#_Toc115087225
 4. Tableau desktop license<br>
-Follow instructions to obtain access here: [TableauDesktopLicenseActivation.pdf ](https://documentcloud.adobe.com/spodintegration/index.html?locale=en-us) 
-
+Follow instructions to obtain access here: [TableauDesktopLicenseActivation.pdf ](https://documentcloud.adobe.com/spodintegration/index.html?locale=en-us)
 
 # Contact
 
