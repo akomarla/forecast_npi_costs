@@ -118,7 +118,7 @@ Cost forecasts are computed for a build unit using variables such as "BOM+MVA Co
 | `str` | `read_file_path` | Path of ODM quote file | "odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm" |
 | `list` | `ignore_sheets` | Sheets in input without quote data to be skipped during processing | ['Input', 'MainSheet'] |
 | `boolean` | `excel_output` | Generate output in Excel or not  | True |
-| `str` | `write_file_path` | Path where forecast outputs are written | "//npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx" |
+| `str` | `write_file_path` | Path where forecast outputs are written | "odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx" |
 | `str` | `log_file_path` | Path where logged info is written | "odm_quote_forecast/anchored_results/forecasting_log.log" |
 | `str` | `site_name` | ODM name to assign to input | 'PEGATRON' |
 | `list` | `ww_range_allowed` | Range of WWs to filter builds | [202241, 202253] |
