@@ -17,7 +17,9 @@
 
 # Background
 
-Forecasting future Solid State Drive (SSD) NPI build costs ($) using historical quotes from Offshore Design Manufacturers (ODM) to enable data-driven financial budget planning.  Summary statistics such as mean or weighted mean are used to compute per unit build costs at a product code or program family level. NPI planners may use forecasted values returned in Excel format or view the Tableau dashboard for decison making. 
+Forecasting future Solid State Drive (SSD) NPI build costs ($) using historical quotes from Offshore Design/Device Manufacturers (ODM) to enable data-driven financial budget planning.  Summary statistics such as mean or weighted mean are used to compute per unit build costs at a product code or program family level. NPI planners may use forecasted values returned in Excel format or view the Tableau dashboard for decison making. 
+
+<!--
 
 # Instructions
 
@@ -69,6 +71,8 @@ Data used for forecasting is the NPI planners' quote files for two ODMs:<br>
 6. Modify parameters in the ```config.py``` file using the table below.<br>
 7. Execute the ```run.py``` file in the Python IDE and view output
 
+-->
+
 # How it works 
 
 ## Data flow
@@ -76,7 +80,9 @@ Data used for forecasting is the NPI planners' quote files for two ODMs:<br>
 NPI planners manually drop quote files into the BI Shared Drive. Virtual machine uses it as input to execute the forecasting code. A Windows task scheduler is configured such that it executes at 15 minute intervals (hh:00, hh:15, hh:30, hh:45, and so on). Output is written back to the BI Shared Drive for planners to use and for the Tableau dashboard to read.<br>
 Note: The dashboard also uses additional build plan data from the NPI_BP database. However, this data is not used for the forecasts. Forecasting is purely done using the ODM quote files.
 
-<img src = "https://github.com/solidigm-innersource/gbl_ops_data_analytics.npi.application.quote_forecasting/assets/124313756/c5870288-9cb3-45e2-9d9f-91ca17021902" width = "60%" height = "60%">
+<img src = "https://github.com/akomarla/forecast_npi_costs/assets/124313756/65ce47ca-6818-4f7c-b092-7fa433342683" width = "60%" height = "60%">
+
+<!--
 
 ## Data inputs
 
@@ -101,17 +107,19 @@ PTI ODM: "gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_fil
 `database name` = "ssbi_report_stage"
 `table name` = "vRpt_Dim_TimeWeek_Simple"
 
+--> 
+
 ## Forecasting
 
 Cost forecasts are computed for a build unit using variables such as "BOM+MVA Cost" or "Subtotal=NRE+Qty*(BOM+MVA)" in the ODM quote files. Currently, the code supports mean and weighted mean as two options to forecast the variable at a program family, product code or build ID level. The default parameter values are pertaining to the Pegatron ODM in this example but the logic neatly follows for other ODMs such as PTI Taiwan. Refer to the gen_odm_forecast() function in the ```run.py``` and ```config.py``` to follow along. 
 
 | Data Type | Parameter |             Short Description                | Default Value |
 | :--- | :--- | :-------------------------------------- | :--- |
-| `str` | `read_file_path` | Path of ODM quote file | "S:/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm" |
+| `str` | `read_file_path` | Path of ODM quote file | "odm_quote_files/anchored_data/Solidigm Pegatron NPI Quote File.xlsm" |
 | `list` | `ignore_sheets` | Sheets in input without quote data to be skipped during processing | ['Input', 'MainSheet'] |
 | `boolean` | `excel_output` | Generate output in Excel or not  | True |
 | `str` | `write_file_path` | Path where forecast outputs are written | "//npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/NPI Pegatron Forecasts.xlsx" |
-| `str` | `log_file_path` | Path where logged info is written | "//npcorpgobufileshares.file.core.windows.net/bi-share/Global Supply Planning/gbl_ops_data_analytics.npi.application.quote_forecasting/odm_quote_forecast/anchored_results/forecasting_log.log" |
+| `str` | `log_file_path` | Path where logged info is written | "odm_quote_forecast/anchored_results/forecasting_log.log" |
 | `str` | `site_name` | ODM name to assign to input | 'PEGATRON' |
 | `list` | `ww_range_allowed` | Range of WWs to filter builds | [202241, 202253] |
 | `str` | `ww_col` | Column name in ODM quote file with WWs | 'Req WW (WW enterd)' |
@@ -132,6 +140,7 @@ The testing capability helps ensure that the forecasting code is working as it s
 | `df` | `ft_test` | Dataframe computed using the code | None |
 | `list` | `cols` | Category and column to use for comparison  | ['Product Code', 'Forecast of: BOM+MVA Cost (mean)'] |
 
+<!--
 # Tableau Dashboard
 
 Dashboard available here: https://solidigmtableau-dev.corp.nandps.com/#/workbooks/1281/views 
@@ -197,4 +206,5 @@ Follow instructions to obtain access here: [TableauDesktopLicenseActivation.pdf 
 # Contact
 
 Tool: Aparna Komarla (aparna.komarla@solidigm.com) or Ron Bidgood (ron.bidgood@solidigm.com). Tableau Dashboard: Eugene Hipos (eugene.hipos@solidigm.com).
- 
+
+-->
